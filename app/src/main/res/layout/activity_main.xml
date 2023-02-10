@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="420dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="9dp"
+    android:layout_marginLeft="30dp"
+app:cardBackgroundColor="#8A605F"
+    android:layout_marginRight="30dp"
+    >
+
+    <EditText
+        android:id="@+id/txt_searchtext"
+        android:layout_width="280dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:paddingLeft="14dp"
+        android:background="@color/white"
+        android:hint="Search"
+        android:textSize="17sp" />
+
+
+</androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="464dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="7dp"
+        android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+      android:id="@+id/fb"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#8A605F"
+        android:onClick="btn_uploadActivity"
+        android:src="@drawable/ic_file_upload_black_24dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            android:id="@+id/carousel"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="-4dp"
+            android:layout_marginBottom="506dp"
+            app:autoPlay="true"
+            app:showCaption="false"
+            app:showNavigationButtons="false" />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
